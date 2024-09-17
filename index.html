@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lift Simulation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div id="floors-container">
-        <div class="floor" id="floor-1" data-floor="1">
-            <button class="call-lift" data-floor="1">Call Lift</button>
-        </div>
-        <div class="floor" id="floor-2" data-floor="2">
-            <button class="call-lift" data-floor="2">Call Lift</button>
-        </div>
-        <div class="floor" id="floor-3" data-floor="3">
-            <button class="call-lift" data-floor="3">Call Lift</button>
-        </div>
-        <div class="floor" id="floor-4" data-floor="4">
-            <button class="call-lift" data-floor="4">Call Lift</button>
-        </div>
+    <div id="input-container">
+        <form id="config-form">
+            <label for="num-floors">Number of Floors:</label>
+            <input type="number" id="num-floors" name="num-floors" min="1" value="4" required>
+            
+            <label for="num-lifts">Number of Lifts:</label>
+            <input type="number" id="num-lifts" name="num-lifts" min="1" value="2" required>
+            
+            <button type="submit">Generate</button>
+        </form>
     </div>
 
-    <div id="lifts-container">
-        <div class="lift" id="lift-1" data-lift="1"></div>
-        <div class="lift" id="lift-2" data-lift="2"></div>
+    <div id="container">
+        <div id="floors-container"></div>
+        <div id="lifts-container"></div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
